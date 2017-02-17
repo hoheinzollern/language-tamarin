@@ -5,7 +5,7 @@
   "description": "Support for the Tamarin theorem prover",
   "keywords": [
   ],
-  "repository": "https://github.com/atom/language-tamarin",
+  "repository": "https://github.com/hoheinzollern/language-tamarin",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
