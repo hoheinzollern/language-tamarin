@@ -1,0 +1,39 @@
+'scopeName': 'source.spthy'
+'name': 'Tamarin'
+'fileTypes': ['spthy']
+
+'patterns': [
+	{
+		'begin': '//'
+		'end': '\\n'
+		'name': 'comment.line'
+	}
+	{
+		'match': '\\b(theory|builtins|functions|equations)\\b'
+		'name': 'keyword.control.structure'
+	}
+	{
+		'match': '\\b(rule|lemma|axiom|begin|end|let|in|All|Ex)\\b'
+		'name': 'keyword.control'
+	}
+	{
+		'match': '(!|--\\[|\\]->|-->|\\[|\\]|=|:|/|\\(|\\)|"|,|\\.|==>|<|@)'
+		'name': 'keyword.operator'
+	}
+	{
+		'match': '(\\~|\\$|#)'
+		'name': 'keyword.other'
+	}
+  {
+    'match': '\\b[a-zA-Z0-9_]+(?=([(]|/))\\b'
+    'name': 'entity.name.function.declaration.aif'
+  }
+  {
+    'match': '\\b[a-zA-Z0-9_]+\\b'
+    'name': 'variable.other.aif'
+  }
+	{
+		'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((E|e)(\\+|-)?[0-9]+)?\\b'
+		'name': 'constant.numeric'
+	}
+]
