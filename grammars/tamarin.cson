@@ -2,6 +2,9 @@
 'name': 'Tamarin'
 'fileTypes': ['spthy']
 
+'foldingStartMarker': 'rule'
+'foldingStopMarker': '\\[[^\\]]*\\]'
+
 'patterns': [
 	{
 		'begin': '//'
