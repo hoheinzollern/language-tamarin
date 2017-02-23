@@ -18,7 +18,15 @@
 		'name': 'keyword.control.structure.tamarin'
 	}
 	{
-		'match': '\\b(rule|lemma|axiom|begin|end|let|in|All|Ex)\\b'
+		'match': '\\b(rule|lemma)(?:\\s+([^\\s:]+)\\s*(:)?|\\b)'
+		'name': 'meta.$1.tamarin'
+		'captures':
+			'1': 'name': 'storage.type.$1.tamarin'
+			'2': 'name': 'entity.name.function.tamarin'
+			'3': 'name': 'punctuation.separator.key-value.tamarin'
+	}
+	{
+		'match': '\\b(axiom|begin|end|let|in|All|Ex)\\b'
 		'name': 'keyword.control.tamarin'
 	}
 	{
