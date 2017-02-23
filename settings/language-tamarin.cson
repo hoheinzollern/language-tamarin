@@ -1,3 +1,4 @@
 '.source.tamarin':
-  'editor':
-    'commentStart': '// '
+	'editor':
+		'commentStart': '// '
+		'increaseIndentPattern': '\\b(rule|lemma)\\s.*:\\s*$'
