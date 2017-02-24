@@ -1,4 +1,4 @@
-'scopeName': 'source.spthy'
+'scopeName': 'source.tamarin'
 'name': 'Tamarin'
 'fileTypes': ['spthy']
 
@@ -8,35 +8,45 @@
 'patterns': [
 	{
 		'begin': '//'
-		'end': '\\n'
-		'name': 'comment.line'
+		'end': '$'
+		'name': 'comment.line.double-slash.tamarin'
+		'beginCaptures':
+			'0': 'name': 'punctuation.definition.comment.tamarin'
 	}
 	{
 		'match': '\\b(theory|builtins|functions|equations)\\b'
-		'name': 'keyword.control.structure'
+		'name': 'keyword.control.structure.tamarin'
 	}
 	{
-		'match': '\\b(rule|lemma|axiom|begin|end|let|in|All|Ex)\\b'
-		'name': 'keyword.control'
+		'match': '\\b(rule|lemma)(?:\\s+([^\\s:]+)\\s*(:)?|\\b)'
+		'name': 'meta.$1.tamarin'
+		'captures':
+			'1': 'name': 'storage.type.$1.tamarin'
+			'2': 'name': 'entity.name.function.tamarin'
+			'3': 'name': 'punctuation.separator.key-value.tamarin'
+	}
+	{
+		'match': '\\b(axiom|begin|end|let|in|All|Ex)\\b'
+		'name': 'keyword.control.tamarin'
 	}
 	{
 		'match': '(!|--\\[|\\]->|-->|\\[|\\]|=|:|/|\\(|\\)|"|,|\\.|==>|<|@)'
-		'name': 'keyword.operator'
+		'name': 'keyword.operator.tamarin'
 	}
 	{
 		'match': '(\\~|\\$|#)'
-		'name': 'keyword.other'
+		'name': 'keyword.other.tamarin'
 	}
-  {
-    'match': '\\b[a-zA-Z0-9_]+(?=([(]|/))\\b'
-    'name': 'entity.name.function.declaration.aif'
-  }
-  {
-    'match': '\\b[a-zA-Z0-9_]+\\b'
-    'name': 'variable.other.aif'
-  }
+	{
+		'match': '\\b[a-zA-Z0-9_]+(?=([(]|/))\\b'
+		'name': 'entity.name.function.declaration.tamarin'
+	}
+	{
+		'match': '\\b[a-zA-Z0-9_]+\\b'
+		'name': 'variable.other.tamarin'
+	}
 	{
 		'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((E|e)(\\+|-)?[0-9]+)?\\b'
-		'name': 'constant.numeric'
+		'name': 'constant.numeric.tamarin'
 	}
 ]

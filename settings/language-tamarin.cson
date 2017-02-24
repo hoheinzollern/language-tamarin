@@ -1,3 +1,4 @@
-'.source.spthy':
-  'editor':
-    'commentStart': '// '
+'.source.tamarin':
+	'editor':
+		'commentStart': '// '
+		'increaseIndentPattern': '\\b(rule|lemma)\\s.*:\\s*$'
