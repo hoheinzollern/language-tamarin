@@ -1,8 +1,13 @@
 {
   "name": "language-tamarin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Support for the Tamarin theorem prover",
-  "keywords": ["spthy", "theorem", "protocol", "TLS"],
+  "keywords": [
+    "spthy",
+    "theorem",
+    "protocol",
+    "TLS"
+  ],
   "repository": "https://github.com/hoheinzollern/language-tamarin",
   "license": "MIT",
   "engines": {
